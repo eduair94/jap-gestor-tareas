@@ -20,16 +20,16 @@ const mostrar = () => {
                     <p>${descripcion}</p>
                 </div>
                 <div class="d-flex flex-column">
-                    <button onclick=editar(${index}) data-bs-toggle="modal" data-bs-target="#editModal" class="btn bg-transparent">
+                    <button ${completed ? 'disabled' : ''} onclick=editar(${index}) data-bs-toggle="modal" data-bs-target="#editModal" class="btn bg-transparent">
                         <i class="bi bi-pencil-square h4"></i>
                     </button>
                     <button onclick=completed(${index}) class="btn ${completed ? 'btn-success' : 'bg-transparent'}">
                         <i class="bi bi-check-square h4"></i>
                     </button>
-                    <button onclick=important(${index})  class="btn ${important ? 'btn-warning' : 'bg-transparent'}">
+                    <button ${completed ? 'disabled' : ''} onclick=important(${index})  class="btn ${important ? 'btn-warning' : 'bg-transparent'}">
                         <i class="bi bi-exclamation-square h4"></i>
                     </button>
-                    <button onclick=eliminar(${index}) class="btn bg-transparent">
+                    <button  onclick=eliminar(${index}) class="btn bg-transparent">
                         <i class="bi bi-x-square h4"></i>
                     </button>
                 </div>
